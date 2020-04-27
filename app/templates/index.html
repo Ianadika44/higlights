@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% block content %}
+
+
+<!-- Popular movie section  -->
+<h3> BBC NEWS</h3>
+<ul>
+    {{ macro.displayArticleList(bbc_news)}}
+</ul>
+<!-- Upcoming movie  -->
+<h3> CNN NEWS </h3>
+<ul>
+    {{ macro.displayArticleList(cnn)}}
+</ul>
+<!-- Now showing movie -->
+<h3>ALJAZEERA NEWS</h3>
+<ul>
+    {{ macro.displayArticleList(aljazeera)}}
+</ul>
+
+{% endblock %}
