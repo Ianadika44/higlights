@@ -1,1 +1,9 @@
-<h1> Welcome to the online news broadcast {{ id }} </h1>
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+        <h3>{{ news.title }}</h3>
+    </div>
+</div>
+{% endblock %}

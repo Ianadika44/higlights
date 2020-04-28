@@ -1,7 +1,7 @@
 from app import app
 import urllib.request
 import json
-from .models import article,source
+from .models import article, source
 
 Article = article.Article
 Source = source.Source
@@ -61,27 +61,19 @@ def process_results(article_list):
     return article_results
 
 
-def get_source(id):
-    get_source_details_url = base_url.format(id, api_key)
+def get_sources(id):
+    get_sources_details_url = base_url.format(id, api_key)
 
-    with urllib.request.urlopen(get_source_details_url) as url:
-        source_details_data = url.read()
-        source_details_response = json.loads(source_details_data)
+    with urllib.request.urlopen(get_sources_details_url) as url:
+        sources_details_data = url.read()
+        sources_details_response = json.loads(sources_details_data)
 
-        source_object = None
-        if source_details_response:
-            id = source_item.get('id')
-            name = source_item.get('name')
-            description = source_item.get('description')
-            url = source_item.get('url')
-            category = source_item.get('category')
-            language = source_item.get('language')
-            country = source_item.get('country')
+        sources_object = None
+        if sources_details_response:
+            ['source']
+            sources_object = Source(process_results)
 
-            source_object = Source(id, name, description,
-                                   url, category, language, country)
-
-    return movie_object
+    return sources_object
 
 
 def process_results(source_list):
@@ -97,16 +89,17 @@ General_news = get_sources()
     '''
     source_results = []
     for source_item in source_list:
-        id = source_item.get('id')
-        name = source_item.get('name')
-        description = source_item.get('description')
-        url = source_item.get('url')
-        category = source_item.get('category')
-        language = source_item.get('language')
-        country = source_item.get('country')
+        id = sources_details_response.get('id')
+        name = sources_details_response.get('name')
+        description = sources_details_response.get('description')
+        url = sources_details_response.get('url')
+        category = sources_details_response.get('category')
+        language = sources_details_response.get('language')
+        country = sources_details_response.get('country')
 
         if name:
-            sources_object = Source(id, name, description, url, category, country)
+            sources_object = Source(
+                id, name, description, url, category, country)
             sources_results.append(sources_object)
 
     return source_results
