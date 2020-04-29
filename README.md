@@ -26,3 +26,14 @@
 - Curl
 - Data 
 - Text Editor
+
+## Getting Started
+- Clone the repository using git clone to your local machine
+- Install or ensure you have python version 3.6
+- Create a virtual environment in your folder via the terminal
+- Visit https://newsapi.org/ to get an API key
+- Create start.sh file 
+- write  export NEWS_API_KEY='<Your-Api-Key>'
+- And run the command python3.6 manage.py server
+- Run chmod +x start.sh follwoed by ./start.sh while in the project folder to start the project.
+- Access your projecct in your local machine with an adress localhost:50
