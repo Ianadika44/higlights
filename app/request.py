@@ -39,15 +39,8 @@ def get_articles(filter):
 
 
 def process_articles(article_list):
-    '''
-    Function  that processes the movie result and transform them to a list of Objects
-
-    Args:
-        movie_list: A list of dictionaries that contain movie details
-
-    Returns :
-        movie_results: A list of movie objects
-    '''
+    
+    
     article_results = []
     for article_item in article_list:
         source = article_item.get('source')
