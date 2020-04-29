@@ -12,3 +12,10 @@
 - See various news sources and select the ones they prefer.
 - See all news sources from the source they selected.
 - Click on an article and read it fully from the news source
+
+## BDD
+- To get the sources of different news one has to navigate on the navbar
+- On the landing page there are different news articles and there is a toggle button where one can use to get the full information of the article
+- When one toggles,the article is displayed from the specific source where the article has been fetched.
+- One is able to read the article that is liked and later can navigate back to the landing page with the home button
+
