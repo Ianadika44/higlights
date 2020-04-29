@@ -43,3 +43,7 @@
 - Boostrap
 - Flask
 - jquery
+
+## CONTACT INFORMATION
+- Email:adika19ian@gmail.com.
+- Phone:0757441659.
