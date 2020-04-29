@@ -19,3 +19,10 @@
 - When one toggles,the article is displayed from the specific source where the article has been fetched.
 - One is able to read the article that is liked and later can navigate back to the landing page with the home button
 
+## Requirements
+- Python version3.6
+- Flask
+- Pip
+- Curl
+- Data 
+- Text Editor
