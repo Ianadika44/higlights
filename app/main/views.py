@@ -1,9 +1,9 @@
 from flask import render_template, request, redirect, url_for
-from app import app
-from .request import get_articles, get_sources
+from . import main
+from ..request import get_articles, get_sources
 
 
-@app.route('/')
+@main.route('/')
 def index():
     '''
     View root page function that returns the index page and its data
@@ -15,7 +15,7 @@ def index():
     return render_template('index.html', title=title, general=general, technology=technology, health=health)
 
 
-@app.route('/articles/<int:id>')
+@main.route('/articles/<int:id>')
 def articles(id):
     '''
     View movie page function that returns the movie details page and its data
@@ -26,8 +26,8 @@ def articles(id):
     return render_template('articles.html', title=title, articles=articles)
 
 
-@app.route('/sources/<id>')
-@app.route('/sources')
+@main.route('/sources/<id>')
+@main.route('/sources')
 def sources(id=None):
     title = 'Sources - All'
     sources = get_sources()
