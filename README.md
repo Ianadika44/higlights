@@ -37,3 +37,9 @@
 - And run the command python3.6 manage.py server
 - Run chmod +x start.sh follwoed by ./start.sh while in the project folder to start the project.
 - Access your projecct in your local machine with an adress localhost:50
+
+## Technologies used
+- Python v3.6
+- Boostrap
+- Flask
+- jquery
