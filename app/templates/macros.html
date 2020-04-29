@@ -1,16 +1,42 @@
 {% macro displayArticleList(article_list) %}
-
 {% for article in article_list %}
-<li>{{news.title}}</li>
-{% endfor %}
+    <div class="col-sm6 col-md-4 col-lg-3 p-2">
+        <div class="card h-100">
+            <img src={{article.urlToImage}} alt="image" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title h4">{{article.title | truncate(40)}}</div>
+                <div class="card-text">{{article.content | truncate(100)}}</div>
+            </div>
+            <div class="card-footer px-0 d-flex justify-content-center">
+                <div class="btn-group">
+                    <a href="{{article.url}}" target="_blank" class="btn btn-sm btn-primary mb-1">View Article</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+{% endfor %}
 {% endmacro %}
 
-{% macro displayNewsourceList(source_list) %}
 
-{% for new in source_list %}
-<li>{{new.name}}</li>
+{% macro displaySources(source_list) %}
 
-
+{% for source in source_list %}
+<div class="col-sm-6 col-md-4 col-lg-3 p-2">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="card-title h4">{{source.name}}</div>
+            <div class="card-subtitle small font-italic">{{source.id}}</div>
+            <div class="card-text">{{source.description}}</div>
+            <a href="/sources/{{source.id}}" class="card-link">Headlines From Source</a> <br>
+            <a href="{{source.url}}" target="_blank" class="card-link">Visit{{source.name | truncate(10)}}</a>
+        </div>
+        <div class="card-footer py-0 small">
+            Category: {{source.category}} <br>
+            Language: {{source.language}}
+        </div>
+    </div>
+</div>
 {% endfor %}
+
 {% endmacro %}
